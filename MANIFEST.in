@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include neokred_api *.css
+recursive-include neokred_api *.csv
+recursive-include neokred_api *.html
+recursive-include neokred_api *.ico
+recursive-include neokred_api *.js
+recursive-include neokred_api *.json
+recursive-include neokred_api *.md
+recursive-include neokred_api *.png
+recursive-include neokred_api *.py
+recursive-include neokred_api *.svg
+recursive-include neokred_api *.txt
+recursive-exclude neokred_api *.pyc
