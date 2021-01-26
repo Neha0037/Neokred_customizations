@@ -8,11 +8,10 @@ frappe.ui.form.on('Neokred Settings', {
     },
     call_api: function(frm) {
         frappe.call({
-            method: "neokred_api.custom_method.get_neokred_url",
-            args: { api_key: frm.doc.api_key, authorization: frm.doc.authorization, client_hash_id: frm.doc.client_hash_id, base_url: frm.doc.base_url},
+            method: "neokred_api.custom_method.get_neo_activate_card",
+            args: { email: frm.doc.email, password: frm.doc.password, api_key: frm.doc.api_key, client_hash_id: frm.doc.client_hash_id, base_url: frm.doc.base_url},
             callback: function(r) {
-                console.log('url---'+r.message);
-                window.open(r.message.details.uatUrl);
+                window.open(r.message);
             }
         });
 	}
